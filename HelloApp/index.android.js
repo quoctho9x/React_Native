@@ -1,6 +1,7 @@
 // Buoc 1:import thu vien
 import React,{Component} from 'react';
-import {
+import {Platform,
+    Image,
     AppRegistry,
     StatusBar,
     StyleSheet,
@@ -18,7 +19,7 @@ import Button_default from './component/button'; //goi ra calculator
 class HelloApp extends Component{
   //constructor day la ham khoi tao, duoc chay ngay sao khi HelloApp duoc tao ra.
   // khai bao nguon du lieu do ve
-  constructor(props){
+  constructor(props){4
     super(props);
     this.state={
         number:0
@@ -35,6 +36,7 @@ class HelloApp extends Component{
   }
 
   render(){
+      console.log('day la he dieu hanh :'+ Platform.OS + ' ; voi phien ban la :'+Platform.Version);
     return(
         <View style={styles.container}>
             <View style={styles.header }>
@@ -42,6 +44,7 @@ class HelloApp extends Component{
             </View>
             <View style={styles.contain}>
                 <Text style={styles.text_contain}>{this.state.number}</Text>
+                <Image style={{width:60,height:40}} source={require('./images/logo_og.png')} />
             </View>
             <View style={styles.wrap_btn}>
                 <View style={styles.button} >

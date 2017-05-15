@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet,Platform} from 'react-native'
 const styles = StyleSheet.create({
     container:{
         flex:1,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 
     text_header:{
         fontSize:25,
-        color:'white',
+        color:Platform.select({ios:'red',android:'black'}),
 
     },
     text_contain:{
