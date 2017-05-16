@@ -9,7 +9,7 @@ import {
     Button,
     TouchableOpacity,
 } from 'react-native';
-import styles from '../android/style';
+import styles from '../style/style';
 import { StackNavigator } from 'react-navigation';
 import Calculator from './component/calculator'; //goi ra calculator
 import Button_default from './component/button'; //goi ra calculator
