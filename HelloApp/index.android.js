@@ -5,13 +5,14 @@ import {
     View,
 } from 'react-native';
 import HelloApp from './component/App';
+import SideMenu from './component/SideMenu';
 
 //Buoc 2: viec code Class (component):RENDER => khác hàng muốn thấy gì thì render ra cái đó
 class Main extends Component{
   render(){
     return(
         <View>
-            <HelloApp/>
+
         </View>
     );
   }

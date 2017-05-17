@@ -17,6 +17,7 @@ import ChatScreen from './chatScreen';
 import { StackNavigator } from 'react-navigation';
 import Calculator from './calculator'; //goi ra calculator
 import Button_default from './button'; //goi ra calculator
+import SideMenu from './SideMenu'; //goi ra calculator
 
 //Buoc 2: viec code Class (component):RENDER => khác hàng muốn thấy gì thì render ra cái đó
 class HelloApp extends Component{
@@ -30,8 +31,9 @@ class HelloApp extends Component{
     }
     render(){
         return(
-            <View style={styles.container}>
-                <SimpleApp/>
+            <View >
+                {/*<SimpleApp/>*/}
+                <SideMenu/>
             </View>
         );
     }
