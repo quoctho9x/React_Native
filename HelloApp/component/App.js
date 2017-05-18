@@ -18,9 +18,10 @@ import { StackNavigator } from 'react-navigation';
 import Calculator from './calculator'; //goi ra calculator
 import Button_default from './button'; //goi ra calculator
 import SideMenu from './SideMenu'; //goi ra calculator
+import AsyncStorageDemo from './AsyncStorage'; //goi ra calculator
 
 //Buoc 2: viec code Class (component):RENDER => khác hàng muốn thấy gì thì render ra cái đó
-class HelloApp extends Component{
+export default class Main extends Component{
     //constructor day la ham khoi tao, duoc chay ngay sao khi HelloApp duoc tao ra.
     // khai bao nguon du lieu do ve
     constructor(props){
@@ -31,9 +32,10 @@ class HelloApp extends Component{
     }
     render(){
         return(
-            <View >
+            <View style={{flex:1}}>
                 {/*<SimpleApp/>*/}
-                <SideMenu/>
+                {/*<SideMenu/>*/}
+                <AsyncStorageDemo/>
             </View>
         );
     }
@@ -42,10 +44,3 @@ const SimpleApp = StackNavigator({
     Home: { screen: HomeScreen },
     Chat: { screen: ChatScreen },
 });
-//Buoc 3: dang ky (register) COMPONENT chinh
-AppRegistry.registerComponent('HelloApp', () => HelloApp);
-/*=======NOTE============
- -mỗi màng hình là 1 component
- - <View> chinh la the <div> de dinh danh ra cac khu vuc trong project
- - <Text> chinh la the <p>
- =======================*/

@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     },
     text_contain:{
         fontSize:100,
-        color:'red',
+        color:'yellow',
     },
     text_button:{
         fontSize:25,

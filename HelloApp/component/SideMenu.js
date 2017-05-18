@@ -13,31 +13,29 @@ import styles from '../style/style';
 export default class SideMenu extends Component{
 
     closeControlPanel = () => {
-        this._drawer.close()
+        this.drawer.close()
     };
     openControlPanel = () => {
-        this._drawer.open()
+        this.drawer.open()
     };
     render(){
         return(
+        <View style={{flex:1}}>
             <Drawer
-                type="static"
-                tapToClose={true}
-                openDrawerOffset={0.2} // 20% gap on the right side of drawer
-                panCloseMask={0.2}
-                closedDrawerOffset={-3}
-                ref={(ref) => this._drawer = ref}
+                ref={(ref) => { this.drawer = ref; }}
                 content={
-                    <View style={{flex:1,backgroundColor:'yellow',}}><Text>aa</Text></View>
+                    <View style={{flex:1,backgroundColor:"yellow",}}><Text>aa</Text></View>
                 }
             >
-                <View style={{flex:1,backgroundColor:'red',padding:50,}}>
+                <View style={{flex:1,backgroundColor:"red",padding:50,}}>
                     <TouchableOpacity onPress={()=>this.openControlPanel()}>
                         <Text>open</Text>
                     </TouchableOpacity>
 
                 </View>
             </Drawer>
+        </View>
+
         );
     }
 }
