@@ -19,6 +19,8 @@ import Calculator from './calculator'; //goi ra calculator
 import Button_default from './button'; //goi ra calculator
 import SideMenu from './SideMenu'; //goi ra calculator
 import AsyncStorageDemo from './AsyncStorage'; //goi ra calculator
+import TabBar from './TabBar'; //goi ra calculator
+import Login from './login'; //goi ra calculator
 
 //Buoc 2: viec code Class (component):RENDER => khác hàng muốn thấy gì thì render ra cái đó
 export default class Main extends Component{
@@ -35,7 +37,8 @@ export default class Main extends Component{
             <View style={{flex:1}}>
                 {/*<SimpleApp/>*/}
                 {/*<SideMenu/>*/}
-                <AsyncStorageDemo/>
+               {/* <AsyncStorageDemo/>*/}
+                <Login/>
             </View>
         );
     }
